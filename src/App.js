@@ -1,23 +1,16 @@
-import { useEffect, useState } from "react";
+import { Route, Switch } from "react-router-dom";
 import "./App.css";
+import Element from "./components/Element/Element";
 import Table from "./components/Table/Table";
 
 function App() {
-  const [elements, setElements] = useState();
-  const API =
-    "https://periodic-table-api-marouane.herokuapp.com/chemical-elements?fbclid=IwAR2s-quVl_Y7123V9TkESQDeOuRNsdDvC2Pia1Iv5KrBjr3ENBgQTowyJz0";
-
-  const getElements = async () => {
-    const response = await fetch(API);
-    const data = await response.json();
-    setElements(data);
-  };
-  useEffect(() => {
-    getElements();
-  }, []);
   return (
     <div className="App">
-      {elements ? <Table elements={elements} /> : "spinner"}
+      {/* {elements ? <Table elements={elements} /> : "spinner"} */}
+      <Switch>
+        <Route exact path="/" component={Table} />
+        <Route path="/:id" component={Element} />
+      </Switch>
     </div>
   );
 }

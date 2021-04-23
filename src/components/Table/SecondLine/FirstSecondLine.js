@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FirstSecondLine = ({ elements }) => {
   return elements ? (
@@ -6,125 +7,145 @@ const FirstSecondLine = ({ elements }) => {
       {elements.map((element) =>
         element.Z > 2 && element.Z < 5 ? (
           element.group === "Noble Gas" ? (
-            <div
+            <Link
+              to={{ pathname: `/${element.Z}`, props: element }}
               style={{
                 border: "2px solid black",
                 padding: "10px",
                 backgroundColor: "pink",
               }}
               className="element"
+              key={element.Z}
             >
               <p style={{ padding: "5px" }}>{element.Z}</p>
               <h4>{element.symbol}</h4>
-            </div>
+            </Link>
           ) : element.group === "Nonmetal" ? (
-            <div
+            <Link
+              to={{ pathname: `/${element.Z}`, props: element }}
               style={{
                 border: "2px solid black",
                 padding: "10px",
                 backgroundColor: "orange",
               }}
               className="element"
+              key={element.Z}
             >
               <p style={{ padding: "5px" }}>{element.Z}</p>
               <h4>{element.symbol}</h4>
-            </div>
+            </Link>
           ) : element.group === "Alkali Metal" ? (
-            <div
+            <Link
+              to={{ pathname: `/${element.Z}`, props: element }}
               style={{
                 border: "2px solid black",
                 padding: "10px",
                 backgroundColor: "green",
               }}
               className="element"
+              key={element.Z}
             >
               <p style={{ padding: "5px" }}>{element.Z}</p>
               <h4>{element.symbol}</h4>
-            </div>
+            </Link>
           ) : element.group === "Alkaline Earth Metal" ? (
-            <div
+            <Link
+              to={{ pathname: `/${element.Z}`, props: element }}
               style={{
                 border: "2px solid black",
                 padding: "10px",
                 backgroundColor: "yellow",
               }}
               className="element"
+              key={element.Z}
             >
               <p style={{ padding: "5px" }}>{element.Z}</p>
               <h4>{element.symbol}</h4>
-            </div>
+            </Link>
           ) : element.group === "Metalloid" ? (
-            <div
+            <Link
+              to={{ pathname: `/${element.Z}`, props: element }}
               style={{
                 border: "2px solid black",
                 padding: "10px",
                 backgroundColor: "violet",
               }}
               className="element"
+              key={element.Z}
             >
               <p style={{ padding: "5px" }}>{element.Z}</p>
               <h4>{element.symbol}</h4>
-            </div>
+            </Link>
           ) : element.group === "Halogen" ? (
-            <div
+            <Link
+              to={{ pathname: `/${element.Z}`, props: element }}
               style={{
                 border: "2px solid black",
                 padding: "10px",
                 backgroundColor: "turquoise",
               }}
               className="element"
+              key={element.Z}
             >
               <p style={{ padding: "5px" }}>{element.Z}</p>
               <h4>{element.symbol}</h4>
-            </div>
+            </Link>
           ) : element.group === "Post-Transition Metal" ? (
-            <div
+            <Link
+              to={{ pathname: `/${element.Z}`, props: element }}
               style={{
                 border: "2px solid black",
                 padding: "10px",
                 backgroundColor: "tomato",
               }}
               className="element"
+              key={element.Z}
             >
               <p style={{ padding: "5px" }}>{element.Z}</p>
               <h4>{element.symbol}</h4>
-            </div>
+            </Link>
           ) : element.group === "Transition Metal" ? (
-            <div
+            <Link
+              to={{ pathname: `/${element.Z}`, props: element }}
               style={{
                 border: "2px solid black",
                 padding: "10px",
                 backgroundColor: "grey",
               }}
               className="element"
+              key={element.Z}
             >
               <p style={{ padding: "5px" }}>{element.Z}</p>
               <h4>{element.symbol}</h4>
-            </div>
+            </Link>
           ) : element.group === "Lanthanide" ? (
-            <div
+            <Link
+              to={{ pathname: `/${element.Z}`, props: element }}
               style={{
                 border: "2px solid black",
                 padding: "10px",
                 backgroundColor: "yellowgreen",
               }}
               className="element"
+              key={element.Z}
             >
               <p style={{ padding: "5px" }}>{element.Z}</p>
               <h4>{element.symbol}</h4>
-            </div>
+            </Link>
           ) : (
-            <div
+            <Link
+              to={{ pathname: `/${element.Z}`, props: element }}
               style={{
                 border: "2px solid black",
                 padding: "10px",
                 backgroundColor: "yellowgreen",
               }}
               className="element"
+              key={element.Z}
             >
               <p style={{ padding: "5px" }}>{element.Z}</p>
               <h4>{element.symbol}</h4>
-            </div>
+            </Link>
           )
         ) : null
       )}
