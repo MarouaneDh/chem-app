@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import Table from "./components/Table/Table";
 
 function App() {
+  const [elements, setElements] = useState();
+  const API =
+    "https://periodic-table-api-marouane.herokuapp.com/chemical-elements?fbclid=IwAR2s-quVl_Y7123V9TkESQDeOuRNsdDvC2Pia1Iv5KrBjr3ENBgQTowyJz0";
+
+  const getElements = async () => {
+    const response = await fetch(API);
+    const data = await response.json();
+    setElements(data);
+  };
+  useEffect(() => {
+    getElements();
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Table elements={elements} />
     </div>
   );
 }
