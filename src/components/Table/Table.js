@@ -1,127 +1,47 @@
 import React from "react";
+import FirstLine from "./FirstLine/FirstLine";
+import FirstSecondLine from "./SecondLine/FirstSecondLine";
+import SecondSecondLine from "./SecondLine/SecondSecondLine";
+import FirstThirdLine from "./ThirdLine/FirstThirdLine";
+import SecondThirdLine from "./ThirdLine/SecondThirdLine";
+import FourthLine from "./FourthLine/FourthLine";
+import FifthLine from "./FifthLine/FifthLine";
+import FirstSixthLine from "./SixthLine/FirstSixthLine";
+import SecondSixthLine from "./SixthLine/SecondSixthLine";
+import FirstSeventhLine from "./SeventhLine/FirstSeventhLine";
+import SecondSeventhLine from "./SeventhLine/SecondSeventhLine";
+import FirstAppendedLine from "./AppendedLines/FirstAppendedLine";
+import SecondAppendedLine from "./AppendedLines/SecondAppendedLine";
+import "./Table.css";
 
 const Table = ({ elements }) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "space-around",
-      }}
-    >
-      {elements.map((element) =>
-        element.group === "Noble Gas" ? (
-          <div
-            style={{
-              border: "2px solid black",
-              padding: "10px",
-              backgroundColor: "pink",
-            }}
-          >
-            <p style={{ padding: "5px" }}>{element.Z}</p>
-            <h4>{element.symbol}</h4>
-          </div>
-        ) : element.group === "Nonmetal" ? (
-          <div
-            style={{
-              border: "2px solid black",
-              padding: "10px",
-              backgroundColor: "orange",
-            }}
-          >
-            <p style={{ padding: "5px" }}>{element.Z}</p>
-            <h4>{element.symbol}</h4>
-          </div>
-        ) : element.group === "Alkali Metal" ? (
-          <div
-            style={{
-              border: "2px solid black",
-              padding: "10px",
-              backgroundColor: "green",
-            }}
-          >
-            <p style={{ padding: "5px" }}>{element.Z}</p>
-            <h4>{element.symbol}</h4>
-          </div>
-        ) : element.group === "Alkaline Earth Metal" ? (
-          <div
-            style={{
-              border: "2px solid black",
-              padding: "10px",
-              backgroundColor: "yellow",
-            }}
-          >
-            <p style={{ padding: "5px" }}>{element.Z}</p>
-            <h4>{element.symbol}</h4>
-          </div>
-        ) : element.group === "Metalloid" ? (
-          <div
-            style={{
-              border: "2px solid black",
-              padding: "10px",
-              backgroundColor: "violet",
-            }}
-          >
-            <p style={{ padding: "5px" }}>{element.Z}</p>
-            <h4>{element.symbol}</h4>
-          </div>
-        ) : element.group === "Halogen" ? (
-          <div
-            style={{
-              border: "2px solid black",
-              padding: "10px",
-              backgroundColor: "turquoise",
-            }}
-          >
-            <p style={{ padding: "5px" }}>{element.Z}</p>
-            <h4>{element.symbol}</h4>
-          </div>
-        ) : element.group === "Post-Transition Metal" ? (
-          <div
-            style={{
-              border: "2px solid black",
-              padding: "10px",
-              backgroundColor: "tomato",
-            }}
-          >
-            <p style={{ padding: "5px" }}>{element.Z}</p>
-            <h4>{element.symbol}</h4>
-          </div>
-        ) : element.group === "Transition Metal" ? (
-          <div
-            style={{
-              border: "2px solid black",
-              padding: "10px",
-              backgroundColor: "grey",
-            }}
-          >
-            <p style={{ padding: "5px" }}>{element.Z}</p>
-            <h4>{element.symbol}</h4>
-          </div>
-        ) : element.group === "Lanthanide" ? (
-          <div
-            style={{
-              border: "2px solid black",
-              padding: "10px",
-              backgroundColor: "yellowgreen",
-            }}
-          >
-            <p style={{ padding: "5px" }}>{element.Z}</p>
-            <h4>{element.symbol}</h4>
-          </div>
-        ) : (
-          <div
-            style={{
-              border: "2px solid black",
-              padding: "10px",
-              backgroundColor: "yellowgreen",
-            }}
-          >
-            <p style={{ padding: "5px" }}>{element.Z}</p>
-            <h4>{element.symbol}</h4>
-          </div>
-        )
-      )}
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <FirstLine elements={elements} />
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <FirstSecondLine elements={elements} />
+        <SecondSecondLine elements={elements} />
+      </div>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <FirstThirdLine elements={elements} />
+        <SecondThirdLine elements={elements} />
+      </div>
+      <FourthLine elements={elements} />
+      <FifthLine elements={elements} />
+      <div style={{ display: "flex" }}>
+        <FirstSixthLine elements={elements} />
+        <div className="space"></div>
+        <SecondSixthLine elements={elements} />
+      </div>
+      <div style={{ display: "flex" }}>
+        <FirstSeventhLine elements={elements} />
+        <div className="space"></div>
+        <SecondSeventhLine elements={elements} />
+      </div>
+      <div className="appended">
+        <FirstAppendedLine elements={elements} />
+        <SecondAppendedLine elements={elements} />
+      </div>
     </div>
   );
 };

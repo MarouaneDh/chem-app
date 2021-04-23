@@ -17,7 +17,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Table elements={elements} />
+      {elements ? <Table elements={elements} /> : "spinner"}
     </div>
   );
 }
