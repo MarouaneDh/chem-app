@@ -15,11 +15,11 @@ const Element = ({ location }) => {
         borderRadius: "50px",
       }}
     >
-      <img style={{ width: "600px" }} src={element.image} />
+      <img style={{ width: "600px" }} alt={element.name} src={element.image} />
       <h1>{element.name}</h1>
       <h2>Symbol : {element.symbol}</h2>
       <h3>Group : {element.group}</h3>
-      <h3>Atomic Mass : {element.atomicmass}</h3>
+      <h3>Atomic Mass : {element.atomicMass}</h3>
     </div>
   );
 };
