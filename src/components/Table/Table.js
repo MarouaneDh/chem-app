@@ -29,6 +29,7 @@ const Table = () => {
   }, []);
   return elements ? (
     <div style={{ display: "flex", flexDirection: "column" }}>
+      <h1 style={{ color: "white", textAlign: "center" }}>Periodic Table</h1>
       <FirstLine elements={elements} />
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <FirstSecondLine elements={elements} />
@@ -42,17 +43,49 @@ const Table = () => {
       <FifthLine elements={elements} />
       <div style={{ display: "flex" }}>
         <FirstSixthLine elements={elements} />
-        <div className="space"></div>
+        <div className="space">57-71</div>
         <SecondSixthLine elements={elements} />
       </div>
       <div style={{ display: "flex" }}>
         <FirstSeventhLine elements={elements} />
-        <div className="space"></div>
+        <div className="space">89-103</div>
         <SecondSeventhLine elements={elements} />
       </div>
       <div className="appended">
         <FirstAppendedLine elements={elements} />
         <SecondAppendedLine elements={elements} />
+      </div>
+      <div className="groups">
+        <p className="group" style={{ backgroundColor: "orange" }}>
+          Nonmetals
+        </p>
+        <p className="group" style={{ backgroundColor: "green" }}>
+          Alkali Metal
+        </p>
+        <p className="group" style={{ backgroundColor: "yellow" }}>
+          Alkaline Earth Metal
+        </p>
+        <p className="group" style={{ backgroundColor: "gray" }}>
+          Transition Metal
+        </p>
+        <p className="group" style={{ backgroundColor: "violet" }}>
+          Metalloid
+        </p>
+        <p className="group" style={{ backgroundColor: "tomato" }}>
+          Post-Transition Metal
+        </p>
+        <p className="group" style={{ backgroundColor: "turquoise" }}>
+          Halogen
+        </p>
+        <p className="group" style={{ backgroundColor: "yellowgreen" }}>
+          Lanthanide
+        </p>
+        <p className="group" style={{ backgroundColor: "yellowgreen" }}>
+          Nonmetals
+        </p>
+        <p className="group" style={{ backgroundColor: "pink" }}>
+          Noble Gas
+        </p>
       </div>
     </div>
   ) : null;

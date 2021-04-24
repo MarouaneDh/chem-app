@@ -5,9 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: ease-in-out 1s;
+  transition: ease-in-out 0.5s;
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 .element:hover {
   width: 60px;
@@ -16,15 +16,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
-  transition: ease-in-out 1s;
+  transition: ease-in-out 0.5s;
   color: black;
   text-decoration: none;
+  border-radius: 30px;
 }
 .space {
   width: 60px;
   height: 60px;
-  background-color: yellowgreen;
+  background-color: rgb(153, 205, 50);
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: black 2px solid;
 }
 .appended {
   display: flex;
@@ -37,4 +42,13 @@
   max-width: 1080px;
   min-width: 1080px;
   margin: 50px;
+}
+.groups {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  align-items: center;
+}
+.group {
+  padding: 5px;
 }

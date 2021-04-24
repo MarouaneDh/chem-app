@@ -2,8 +2,7 @@ import React from "react";
 
 const Element = ({ location }) => {
   const element = location.props;
-  console.log(element.image);
-  return (
+  return element ? (
     <div
       style={{
         display: "flex",
@@ -21,7 +20,7 @@ const Element = ({ location }) => {
       <h3>Group : {element.group}</h3>
       <h3>Atomic Mass : {element.atomicMass}</h3>
     </div>
-  );
+  ) : null;
 };
 
 export default Element;
